@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import logo from './logo.svg'
 import './App.css'
 import NameBadge from './components/NameBadge'
@@ -5,6 +7,9 @@ import NameBadge from './components/NameBadge'
 const NameBadge2 = () => <div>Hello, I too am Tony</div>
 
 function App() {
+  const [randomName, setRandomName] = useState("Unknown")
+  const [randomNumber, setRandomNumber] = useState(0)
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -20,8 +25,14 @@ function App() {
         >
           Learn React
         </a>
-        <NameBadge />
+        <NameBadge firstName="Tony"/>
         <NameBadge2 />
+        <p> Random name is { randomName }</p>
+        <button onClick={ () => setRandomName('Dianne') }>Set randomName to Dianne</button>
+        <button onClick={ () => setRandomName('Abdu') }>Set randomName to Abdu</button>
+        <button onClick={ () => setRandomName('Al') }>Set randomName to Al</button>
+        <p> Random number is { randomNumber }</p>
+        <button onClick={ () => setRandomNumber(Math.random()*100) }>New random number</button>
       </header>
     </div>
   );

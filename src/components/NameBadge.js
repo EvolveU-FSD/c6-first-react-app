@@ -1,7 +1,5 @@
-import React from 'react'
-
-function NameBadge() {
-    return <div>Hello, my name is Tony</div>
+function NameBadge({ firstName="NOT FILLED IN" }) {
+    return <div>Hello, my name is { firstName }</div>
 }
 
 export default NameBadge
