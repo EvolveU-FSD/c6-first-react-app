@@ -1,9 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-
-function NameBadge() {
-  return <div>Hello, my name is Tony</div>
-}
+import logo from './logo.svg'
+import './App.css'
+import NameBadge from './components/NameBadge'
 
 const NameBadge2 = () => <div>Hello, I too am Tony</div>
 
