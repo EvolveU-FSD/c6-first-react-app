@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
+function NameBadge() {
+  return <div>Hello, my name is Tony</div>
+}
+
+const NameBadge2 = () => <div>Hello, I too am Tony</div>
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +23,8 @@ function App() {
         >
           Learn React
         </a>
+        <NameBadge />
+        <NameBadge2 />
       </header>
     </div>
   );
